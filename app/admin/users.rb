@@ -18,6 +18,7 @@ ActiveAdmin.register User do
     column :id  
     column :email  
     column :created_at
+    column :sign_in_count 
     actions
   end
   form do|f|  

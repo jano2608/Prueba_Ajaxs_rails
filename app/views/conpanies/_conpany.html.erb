@@ -1,0 +1,6 @@
+<tr id="conpany_<%= conpany.id%>">
+        <td><%= conpany.name %></td>
+        <td><%= link_to 'Show', conpany %></td>
+        <td><%= link_to 'Edit', edit_conpany_path(conpany), data: {remote: true} %></td>
+        <td><%= link_to 'Destroy', conpany, method: :delete, data: { confirm: 'Are you sure?' , remote: true } %></td>
+      </tr>

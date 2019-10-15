@@ -1,0 +1,27 @@
+<nav class="navbar navbar-light text-light bg-info">
+    <a class="navbar-brand">
+      <h5>Ajax</h5>
+    </a>
+    <ul class="nav item">
+        
+      <% if user_signed_in? %>
+      
+      
+        <li class="nav-item <%= 'active' if action_name == 'Salir'%>">
+        
+        <%= link_to "Salir", destroy_user_session_path, method: :delete, class:"nav-item nav-link text-dark" %>
+        </li>
+        <%else%>
+        <li>
+        
+        <%= link_to "Inicio", new_user_session_path,class:"nav-item nav-link text-dark" %>
+        </li>
+        <li>
+        
+        <%= link_to "Registrar", new_user_registration_path, class:"nav-item nav-link text-dark" %>
+        </li>
+        
+        <% end %>
+        </li>
+      </ul>
+  </nav>
